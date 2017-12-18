@@ -93,3 +93,17 @@ ansible_winrm_server_cert_validation: 'ignore'
 ansible_user: ec2-user
 ansible_ssh_private_key_file: /path/to/aws/pem/aws-personal.pem
 ```
+
+# Playbooks
+
+## Check if host is windows
+```
+---
+- hosts: all
+  
+  tasks:
+    - fail:
+        msg: "This is not a Windows system"
+      when: ansible_os_family != "Windows"
+```
+      "

@@ -22,6 +22,7 @@ yum install python2-winrm
 We need python2-winrim 
 
 _Option A_
+
 ```
 yum install python2-winrim 
 ```
@@ -31,7 +32,7 @@ _Option B_
 
 ```
 pip install "pywinrm>=0.2.2"
-``
+```
 
 ## Setup Inventory
 

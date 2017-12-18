@@ -75,8 +75,7 @@ connect_interval = 1
 
 ```
 
-# Everything from this point is just raws notes
-
+# Windows Connection vars
 
 ## vars
 
@@ -88,11 +87,9 @@ ansible_port: 5986
 ansible_winrm_server_cert_validation: 'ignore'
 ```
 
+# Linux Connection Vars
+
 ```
-ansible_user: administrator
-ansible_password: <password>
-ansible_port: 5985
-ansible_connection: winrm
-ansible_winrm_scheme: http
-ansible_winrm_server_cert_validation: ignor
+ansible_user: ec2-user
+ansible_ssh_private_key_file: /path/to/aws/pem/aws-personal.pem
 ```

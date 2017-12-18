@@ -106,4 +106,11 @@ ansible_ssh_private_key_file: /path/to/aws/pem/aws-personal.pem
         msg: "This is not a Windows system"
       when: ansible_os_family != "Windows"
 ```
-      "
+
+## win_cmd
+
+```
+- name: "Install dotnet"
+  win_shell: c:\REPLACE_ME.EXE /quiet /norestart
+  register: dotnet_is_install
+```

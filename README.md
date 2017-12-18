@@ -113,4 +113,8 @@ ansible_ssh_private_key_file: /path/to/aws/pem/aws-personal.pem
 - name: "Install dotnet"
   win_shell: c:\REPLACE_ME.EXE /quiet /norestart
   register: dotnet_is_install
+
+- name: "Show me dotnet installation result"
+  debug:
+    var: dotnet_is_install
 ```

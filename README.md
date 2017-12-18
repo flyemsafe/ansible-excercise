@@ -118,3 +118,25 @@ ansible_ssh_private_key_file: /path/to/aws/pem/aws-personal.pem
   debug:
     var: dotnet_is_install
 ```
+
+## win_feature module
+*List all avail features*
+
+```
+Get-WindowsFeature
+```
+
+- win_file
+- win_iis_webapppool 
+- win_iis_virtualdirectory 
+- win_iis_website
+
+
+# Git Repo
+```
+git init
+git add *
+git commit -m "first commit"
+git remote add origin git@github.com:flyemsafe/ansible-excercise.git
+git push -u origin master
+```

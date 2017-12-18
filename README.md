@@ -44,7 +44,7 @@ touch ansible.cfg
 *ansible.cfg*
 
 Everything from this point is just raws notes
-==================================================
+----------------------------------------------
 
 ## vars
 ansible_user: 'localAdminUser'

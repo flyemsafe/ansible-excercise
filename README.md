@@ -79,17 +79,20 @@ connect_interval = 1
 
 
 ## vars
+
+```
 ansible_user: 'localAdminUser'
 ansible_password: 'P455w0rd'
 ansible_connection: 'winrm'
 ansible_port: 5986
 ansible_winrm_server_cert_validation: 'ignore'
+```
 
-
+```
 ansible_user: administrator
 ansible_password: <password>
 ansible_port: 5985
 ansible_connection: winrm
 ansible_winrm_scheme: http
 ansible_winrm_server_cert_validation: ignor
-
+```

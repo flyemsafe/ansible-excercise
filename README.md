@@ -38,13 +38,44 @@ pip install "pywinrm>=0.2.2"
 ```
 mkdir ansible-workshop
 cd ansible-workshop
-mkdir {roles,inventory()}
+mkdir {roles,inventory,host_vars,group_vars}
+touch host_vars/<linux_host>
+touch host_var/<windows_host>
+touch group_vars/linux
+touch group_vars/windows
+touch group_vars/drupal
+touch group_vars/iis
 touch ansible.cfg
 ```
-*ansible.cfg*
+## Setup ansible.cfg
+
+```
+[defaults]
+inventory      = <FILLIN>/ansible-workshop/inventory
+gathering = smart
+roles_path    = <FILLIN>/ansible-workshop/roles
+remote_user = root
+#private_key_file = 
+#vault_password_file = 
+ansible_managed = Ansible managed: {file} modified on %Y-%m-%d %H:%M:%S by {uid} on {host}
+[privilege_escalation]
+[paramiko_connection]
+[ssh_connection]
+pipelining = True
+scp_if_ssh = True
+[persistent_connection]
+connect_timeout = 30
+connect_retries = 30
+connect_interval = 1
+[accelerate]
+[selinux]
+[colors]
+[diff]
+
+```
 
 # Everything from this point is just raws notes
-# ----------------------------------------------
+
 
 ## vars
 ansible_user: 'localAdminUser'
